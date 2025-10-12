@@ -9,6 +9,7 @@
 // Mango, and Lychee).
 
 use std::collections::HashMap;
+use std::fmt;
 
 #[derive(Hash, PartialEq, Eq, Debug)]
 enum Fruit {
@@ -17,6 +18,18 @@ enum Fruit {
     Mango,
     Lychee,
     Pineapple,
+}
+
+impl fmt::Display for Fruit {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            Fruit::Apple => write!(f, "Apple"),
+            Fruit::Banana => write!(f, "Banana"),
+            Fruit::Mango => write!(f, "Mango"),
+            Fruit::Lychee => write!(f, "Lychee"),
+            Fruit::Pineapple => write!(f, "Pineapple"),
+        }
+    }
 }
 
 fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
@@ -32,6 +45,12 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
         // TODO: Insert new fruits if they are not already present in the
         // basket. Note that you are not allowed to put any type of fruit that's
         // already present!
+        println!("{}", fruit);
+        if basket.contains_key(&fruit) { 
+            continue; 
+        }
+        basket.insert(fruit, 1); 
+        
     }
 }
 
