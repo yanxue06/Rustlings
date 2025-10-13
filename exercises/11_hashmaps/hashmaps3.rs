@@ -42,7 +42,7 @@ fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
         };
 
         let team_1_Info = scores.entry(team_1_name).or_insert(empty_team_scores.clone());
-        team_1_Info.goals_scored += team_1_score;  // auto dereference 
+        team_1_Info.goals_scored += team_1_score;  // auto dereference with the . operator 
         team_1_Info.goals_conceded += team_2_score; 
 
         let team_2_Info = scores.entry(team_2_name).or_insert(empty_team_scores.clone());

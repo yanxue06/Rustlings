@@ -4,6 +4,15 @@
 // `hour_of_day` is higher than 23.
 fn maybe_ice_cream(hour_of_day: u16) -> Option<u16> {
     // TODO: Complete the function body.
+    if hours_of_day < 22 {
+        Some(5)
+    }
+    else if hours_of_day > 23 { 
+        None
+    }
+    else { 
+        Some(0)
+    }
 }
 
 fn main() {
