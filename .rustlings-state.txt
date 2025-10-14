@@ -1,6 +1,6 @@
 DON'T EDIT THIS FILE!
 
-options1
+options3
 
 intro1
 intro2
@@ -49,4 +49,6 @@ hashmaps1
 hashmaps2
 hashmaps3
 quiz2
+options1
+options2
 iterators1
